@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ScrollView, View, Image, Text, StyleSheet } from 'react-native';
+import axios from 'axios';
 
 const Views = () => {
   const [data, setData] = useState([]);
@@ -28,7 +29,7 @@ const Views = () => {
       {data.length > 0 &&
         data.map((element) => (
           <View key={element.id} style={styles.cardContainer}>
-            <Image source={{ uri: element.image}} style={styles.image} />
+            <Image source={{uri: `https://cdn2.thecatapi.com/images/${element.reference_image_id}.jpg`}} style={styles.image} />
             <View style={styles.infoContainer}>
               <Text style={styles.breedName}>Name: {element.name}</Text>
               <Text style={styles.breedOrigin}>Country: {element.origin}</Text>
