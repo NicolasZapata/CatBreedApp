@@ -7,8 +7,6 @@ const Login = () => {
   const navigation = useNavigation();
 /**
  * Handles the login process by navigating to the 'Views' screen.
- *
- * @return {void} This function does not return a value.
  */
   const handleLogin = () => {
     navigation.navigate('Views');
